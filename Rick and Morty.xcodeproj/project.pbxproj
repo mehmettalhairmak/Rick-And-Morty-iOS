@@ -13,6 +13,9 @@
 		827D94162A741AFF00C0E172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 827D94152A741AFF00C0E172 /* Assets.xcassets */; };
 		827D94192A741AFF00C0E172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827D94172A741AFF00C0E172 /* LaunchScreen.storyboard */; };
 		827D942B2A7420A100C0E172 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 827D942A2A7420A100C0E172 /* SnapKit */; };
+		827D942E2A7440AD00C0E172 /* RickyMortyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D942D2A7440AD00C0E172 /* RickyMortyModel.swift */; };
+		827D94312A74418A00C0E172 /* RickyMortyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D94302A74418A00C0E172 /* RickyMortyService.swift */; };
+		827D94342A74427900C0E172 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 827D94332A74427900C0E172 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,8 @@
 		827D94152A741AFF00C0E172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		827D94182A741AFF00C0E172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		827D941A2A741AFF00C0E172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		827D942D2A7440AD00C0E172 /* RickyMortyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyModel.swift; sourceTree = "<group>"; };
+		827D94302A74418A00C0E172 /* RickyMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				827D942B2A7420A100C0E172 /* SnapKit in Frameworks */,
+				827D94342A74427900C0E172 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,8 @@
 			children = (
 				827D94202A741CF100C0E172 /* App */,
 				827D94212A741D0600C0E172 /* View */,
+				827D942F2A74417300C0E172 /* Service */,
+				827D942C2A74409000C0E172 /* Model */,
 				827D94152A741AFF00C0E172 /* Assets.xcassets */,
 				827D94172A741AFF00C0E172 /* LaunchScreen.storyboard */,
 				827D941A2A741AFF00C0E172 /* Info.plist */,
@@ -98,6 +106,22 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		827D942C2A74409000C0E172 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				827D942D2A7440AD00C0E172 /* RickyMortyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		827D942F2A74417300C0E172 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				827D94302A74418A00C0E172 /* RickyMortyService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +140,7 @@
 			name = "Rick and Morty";
 			packageProductDependencies = (
 				827D942A2A7420A100C0E172 /* SnapKit */,
+				827D94332A74427900C0E172 /* Alamofire */,
 			);
 			productName = "Rick and Morty";
 			productReference = 827D94092A741AFE00C0E172 /* Rick and Morty.app */;
@@ -147,6 +172,7 @@
 			mainGroup = 827D94002A741AFE00C0E172;
 			packageReferences = (
 				827D94292A7420A100C0E172 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				827D94322A74427900C0E172 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 827D940A2A741AFE00C0E172 /* Products */;
 			projectDirPath = "";
@@ -176,7 +202,9 @@
 			files = (
 				827D94112A741AFE00C0E172 /* ListViewController.swift in Sources */,
 				827D940D2A741AFE00C0E172 /* AppDelegate.swift in Sources */,
+				827D942E2A7440AD00C0E172 /* RickyMortyModel.swift in Sources */,
 				827D940F2A741AFE00C0E172 /* SceneDelegate.swift in Sources */,
+				827D94312A74418A00C0E172 /* RickyMortyService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +422,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		827D94322A74427900C0E172 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -401,6 +437,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 827D94292A7420A100C0E172 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		827D94332A74427900C0E172 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 827D94322A74427900C0E172 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
