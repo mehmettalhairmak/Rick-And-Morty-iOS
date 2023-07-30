@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8201074E2A75B262006EE513 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201074D2A75B262006EE513 /* ListViewModel.swift */; };
+		820107502A75B339006EE513 /* ListViewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201074F2A75B339006EE513 /* ListViewInterfaces.swift */; };
+		82757B422A76751100AC1B51 /* RickyMortyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82757B412A76751100AC1B51 /* RickyMortyCell.swift */; };
+		82757B452A7679C100AC1B51 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 82757B442A7679C100AC1B51 /* Kingfisher */; };
 		827D940D2A741AFE00C0E172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D940C2A741AFE00C0E172 /* AppDelegate.swift */; };
 		827D940F2A741AFE00C0E172 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D940E2A741AFE00C0E172 /* SceneDelegate.swift */; };
 		827D94112A741AFE00C0E172 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D94102A741AFE00C0E172 /* ListViewController.swift */; };
@@ -19,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8201074D2A75B262006EE513 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		8201074F2A75B339006EE513 /* ListViewInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewInterfaces.swift; sourceTree = "<group>"; };
+		82757B412A76751100AC1B51 /* RickyMortyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyCell.swift; sourceTree = "<group>"; };
 		827D94092A741AFE00C0E172 /* Rick and Morty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick and Morty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		827D940C2A741AFE00C0E172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		827D940E2A741AFE00C0E172 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82757B452A7679C100AC1B51 /* Kingfisher in Frameworks */,
 				827D942B2A7420A100C0E172 /* SnapKit in Frameworks */,
 				827D94342A74427900C0E172 /* Alamofire in Frameworks */,
 			);
@@ -43,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82757B402A7674E700AC1B51 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				82757B412A76751100AC1B51 /* RickyMortyCell.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		827D94002A741AFE00C0E172 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				827D94202A741CF100C0E172 /* App */,
+				82757B402A7674E700AC1B51 /* Utils */,
 				827D94212A741D0600C0E172 /* View */,
 				827D942F2A74417300C0E172 /* Service */,
 				827D942C2A74409000C0E172 /* Model */,
@@ -95,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				827D94102A741AFE00C0E172 /* ListViewController.swift */,
+				8201074D2A75B262006EE513 /* ListViewModel.swift */,
+				8201074F2A75B339006EE513 /* ListViewInterfaces.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -141,6 +160,7 @@
 			packageProductDependencies = (
 				827D942A2A7420A100C0E172 /* SnapKit */,
 				827D94332A74427900C0E172 /* Alamofire */,
+				82757B442A7679C100AC1B51 /* Kingfisher */,
 			);
 			productName = "Rick and Morty";
 			productReference = 827D94092A741AFE00C0E172 /* Rick and Morty.app */;
@@ -173,6 +193,7 @@
 			packageReferences = (
 				827D94292A7420A100C0E172 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				827D94322A74427900C0E172 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				82757B432A7679C100AC1B51 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 827D940A2A741AFE00C0E172 /* Products */;
 			projectDirPath = "";
@@ -200,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820107502A75B339006EE513 /* ListViewInterfaces.swift in Sources */,
 				827D94112A741AFE00C0E172 /* ListViewController.swift in Sources */,
 				827D940D2A741AFE00C0E172 /* AppDelegate.swift in Sources */,
+				8201074E2A75B262006EE513 /* ListViewModel.swift in Sources */,
+				82757B422A76751100AC1B51 /* RickyMortyCell.swift in Sources */,
 				827D942E2A7440AD00C0E172 /* RickyMortyModel.swift in Sources */,
 				827D940F2A741AFE00C0E172 /* SceneDelegate.swift in Sources */,
 				827D94312A74418A00C0E172 /* RickyMortyService.swift in Sources */,
@@ -414,6 +438,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		82757B432A7679C100AC1B51 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		827D94292A7420A100C0E172 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -433,6 +465,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		82757B442A7679C100AC1B51 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82757B432A7679C100AC1B51 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		827D942A2A7420A100C0E172 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 827D94292A7420A100C0E172 /* XCRemoteSwiftPackageReference "SnapKit" */;
