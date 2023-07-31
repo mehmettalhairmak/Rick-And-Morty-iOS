@@ -18,19 +18,22 @@ enum RickyMortyServiceEndPoint: String {
 }
 
 protocol RickyMortyServiceInterface {
-    func fetchAllDatas(responseCallback: @escaping (RickyMortyModel?) -> Void)
+    func fetchAllDatas() async throws-> [Result]?
 }
 
 struct RickyMortyService: RickyMortyServiceInterface {
-    func fetchAllDatas(responseCallback: @escaping (RickyMortyModel?) -> Void) {
-        AF.request(RickyMortyServiceEndPoint.characterPath(), method: .get).responseDecodable(of: RickyMortyModel.self) { (response) in
-            guard let data = response.value else {
-                //error
-                print(response)
-                fatalError("Couldn't fetch characters data from API")
-            }
-            
-            responseCallback(data)
+    func fetchAllDatas() async throws -> [Result]? {
+        let request = AF.request(RickyMortyServiceEndPoint.characterPath(), method: .get)
+        var response: RickyMortyModel?
+        do {
+            response = try await request.serializingDecodable(RickyMortyModel.self).value
+        } catch {
+            print("Ricky And Morty Characters API Request Error, \(error)")
+            throw error
         }
+        
+        
+        return response?.results
     }
 }
+

@@ -14,22 +14,23 @@ final class ListViewModel {
     private var isLoading: Bool = false
     private lazy var rickyMortyService: RickyMortyService = RickyMortyService()
     
-    private func fetchItems() {
+    private func fetchItemsAndPerformTask() async {
         changeLoading()
-        
-        rickyMortyService.fetchAllDatas { [weak self] response in
-            self?.changeLoading()
-            
-            self?.rickyMortyCharacters = response?.results ?? []
-            
-            self?.view?.saveDatas(values: self?.rickyMortyCharacters ?? [])
+        do {
+            rickyMortyCharacters = try await rickyMortyService.fetchAllDatas() ?? []
+        } catch {
+            print("error confirmed, \(error)")
         }
+        view?.reloadTableView()
+        changeLoading()
     }
 }
 
 extension ListViewModel: ListViewModelInterface {
     func viewDidLoad() {
-        fetchItems()
+        Task {
+            await fetchItemsAndPerformTask()
+        }
         view?.prepareListView()
     }
     

@@ -11,7 +11,7 @@ protocol ListViewInterface: AnyObject {
     func prepareListView()
     
     func changeLoading(isLoad: Bool)
-    func saveDatas(values: [Result])
+    func reloadTableView()
 }
 
 protocol ListViewModelInterface {

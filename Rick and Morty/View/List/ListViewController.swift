@@ -49,11 +49,15 @@ extension ListViewController: ListViewInterface {
     }
     
     func changeLoading(isLoad: Bool) {
-        isLoad ? indicator.startAnimating() : indicator.stopAnimating()
+        DispatchQueue.main.async {
+            isLoad ? self.indicator.startAnimating() : self.indicator.stopAnimating()
+        }
     }
     
-    func saveDatas(values: [Result]) {
-        tableView.reloadData()
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
