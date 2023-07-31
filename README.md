@@ -26,7 +26,7 @@ I am learning Swift. I developed this project during the time I learned Swift.
 
 <!-- GETTING STARTED -->
 ### Installation
-==========================================================================================
+================================================================
  ```bash
  # Clone this repository
  $ git clone https://github.com/mehmettalhairmak/Rick-And-Morty-iOS.git
@@ -40,8 +40,7 @@ I am learning Swift. I developed this project during the time I learned Swift.
  # Go into xCode
  - Wait till spm files builded. After than push cmd + r
  
-==========================================================================================
-
+================================================================
 
 <!-- CONTACT -->
 ## Contact
